@@ -170,7 +170,7 @@ include'navbar.php';
                             class="position-absolute top-50 start-100 translate-middle bg-white rounded-circle d-none d-lg-block"
                             style="width: 120px; height: 120px;"></span>
                         <button type="button" class="btn-play" data-bs-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-bs-target="#videoModal">
+                            data-src="https://www.youtube.com/watch?v=tIaME5tIZxs&t=176s" data-bs-target="#videoModal">
                             <span></span>
                         </button>
                     </div>

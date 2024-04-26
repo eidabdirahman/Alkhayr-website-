@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,32 +39,17 @@
    <?php
    include'config.php';
    include'navbar.php';
-  
+
    ?>
-   <?php
-if(!empty($_POST["send"])){
-    $UserName = $_POST["UserName"];
-    $UserEmial = $_POST["UserEmail"];
-    $UserSubject = $_POST["UserSubject"];
-    $UserMessage = $_POST["UserMessage"];
-    $ToEmial = "shucaybcabdi2017@gmail.com";
+  
 
-    $mailHeaders = "Name: " . $UserName.
-    "\r\n Email: " .$UserEmial .
-    "\r\n Subject: " . $UserSubject.
-    "\r\n message: " .$UserMessage . "\r\n";
-    if(mail($ToEmial, $UserName, $mailHeaders)){
-        $message = "your information is Recived succesfully";
 
-    }
-}
-?>
 
     <!-- Page Header Start -->
     <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <h1 class="display-3 text-white animated slideInRight">Contact</h1>
-           
+
         </div>
     </div>
     <!-- Page Header End -->
@@ -102,9 +89,9 @@ if(!empty($_POST["send"])){
                             <i class="fa fa-map-marker-alt fa-2x text-primary"></i>
                         </div>
                         <h4 class="mb-3">Office Address</h4>
-                        <p class="mb-2">+012 345 67890</p>
+                        <p class="mb-2">+252 63 4421498</p>
                         <p class="mb-4">+012 345 67890</p>
-                        <a class="btn btn-primary px-4" href="https://www.google.com/maps/dir//H35C%2B476+Al-Khayr+GYM+And+Kung+Fu,+Hargeisa/@9.5577131,44.0682026,16.96z/data=!4m8!4m7!1m0!1m5!1m1!1s0x1628bfd183320ff5:0x8a8d042c938418a1!2m2!1d44.0706504!2d9.5577837?hl=en&entry=ttu"
+                        <a class="btn btn-primary px-4" href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.434156807327!2d44.068076474289555!3d9.557791180489097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1628bfd183320ff5%3A0x8a8d042c938418a1!2sAl-Khayr%20GYM%20And%20Kung%20Fu!5e0!3m2!1sen!2suk!4v1691759779176!5m2!1sen!2suk"
                             target="blank">Direction <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
@@ -119,7 +106,7 @@ if(!empty($_POST["send"])){
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <p class="fw-medium text-uppercase text-primary mb-2">Contact Us</p>
                     <h1 class="display-5 mb-4">If You Have Any Queries, Please Feel Free To Contact Us</h1>
-                  
+
                     <div class="row g-4">
                         <div class="col-6">
                             <div class="d-flex">
@@ -146,42 +133,64 @@ if(!empty($_POST["send"])){
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form method="POST" >
+            <!-- Contact start -->
+                    <form method="POST"  >
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="name" placeholder="Your Name" name="UserName" required>
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name" name="name" >
                                     <label for="name">Your Name</label>
+                                    <?php if (isset($_POST['send'])): ?>
+ 					<?php if (empty($UserName)): ?>
+ 						<span class="text text-danger"><i class="bi bi-exclamation-circle"></i>Name Can not be empty.</span>
+ 					<?php endif ?>
+ 				<?php endif ?>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="email" class="form-control" id="email" placeholder="Your Email" name="UserEmail" required>
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email" name="email" >
                                     <label for="email">Your Email</label>
+                                    <?php if (isset($_POST['send'])): ?>
+ 					<?php if (empty($UserEmial)): ?>
+ 						<span class="text text-danger"><i class="bi bi-exclamation-circle"></i> Email Can not be empty.</span>
+ 					<?php endif ?>
+ 				<?php endif ?>
+
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="subject" placeholder="Subject" name="UserSubject" required>
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject" name="subject" >
                                     <label for="subject">Subject</label>
+                                    <?php if (isset($_POST['send'])): ?>
+ 					<?php if (empty($UserSubject)): ?>
+ 						<span class="text text-danger"><i class="bi bi-exclamation-circle"></i> subject Can not be empty.</span>
+ 					<?php endif ?>
+ 				<?php endif ?>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                        style="height: 150px" name="UserMessage" required></textarea>
+                                        style="height: 150px" name="message" ></textarea>
                                     <label for="message">Message</label>
+                                    <?php if (isset($_POST['send'])): ?>
+ 					<?php if (empty($UserMessage)): ?>
+ 						<span class="text text-danger"><i class="bi bi-exclamation-circle"></i> Message Can not be empty.</span>
+ 					<?php endif ?>
+ 				<?php endif ?>
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary py-3 px-5" type="submit">Send Message</button>
-                             
+                                <button class="btn btn-primary py-3 px-5" type="submit" name="send">Send Message</button>
+
                             </div>
                             <?php if(!empty($message)){ ?>
 
-                            
+
                             <div  class="success">
-                           
+
                                 <strong><?php echo $message; ?></strong>
                             </div>
                             <?php }?>

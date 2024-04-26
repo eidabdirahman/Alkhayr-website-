@@ -2,6 +2,28 @@
  <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
+            <div class="col-lg-3 col-md-3">
+                <img class="img-fluid" src="img/logo.png" >
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.php">About Us</a>
+                    <a class="btn btn-link" href="contact.php">Contact Us</a>
+                    <a class="btn btn-link" href="classes.php">Our classes</a>
+
+                </div>
+                <div class="col-lg-3 col-md-3">
+                    <h5 class="text-white mb-4">Working Hours</h5>
+                    <p class="mb-1">Sabti - Jimce</p>
+                    <h6 class="text-light">06:00 am - 07:30 am</h6>
+                    <h6 class="text-light">01:00 pm - 02:30 pm</h6>
+                    <h6 class="text-light">04:00 pm - 05:30 pm</h6>
+                    <h6 class="text-light">06:00 pm - 07:30 pm</h6>
+                    <h6 class="text-light">08:00 am - 09:30 pm</h6>
+                    <p class="mb-1">Arbacada</p>
+                    <h6 class="text-light">Closed</h6>
+
+                </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-white mb-4">Our Office</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
@@ -18,23 +40,7 @@
                                 class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Quick Links</h5>
-                    <a class="btn btn-link" href="about.php">About Us</a>
-                    <a class="btn btn-link" href="contact.php">Contact Us</a>
-                    <a class="btn btn-link" href="classes.php">Our classes</a>
-                   
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-white mb-4">Working Hours</h5>
-                    <p class="mb-1">Monday - Friday</p>
-                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Saturday</p>
-                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
-                    <p class="mb-1">Sunday</p>
-                    <h6 class="text-light">Closed</h6>
-                </div>
-               
+
             </div>
         </div>
     </div>
@@ -47,7 +53,7 @@
             <p class="mb-2">Copyright &copy; <a class="fw-semi-bold" href="#">Alkhayr Gym And Kung fu</a>, All Right Reserved.
             </p>
             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            
+
         </div>
     </div>
     <!-- Copyright End -->
